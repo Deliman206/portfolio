@@ -1,0 +1,9 @@
+.app{
+  @import './_normalize.scss';
+  @import './_base.scss';
+  @import './_all.scss';
+  @import './_vars.scss';
+  background-color: $background-color;
+}
+.page{
+}
