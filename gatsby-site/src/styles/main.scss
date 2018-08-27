@@ -3,7 +3,31 @@
   @import './_base.scss';
   @import './_all.scss';
   @import './_vars.scss';
-  background-color: $background-color;
-}
-.page{
+  background-color: $secondary;
+  .link {
+    color: white;
+    text-decoration: none;
+  }
+  .header {
+    background-color: $primary;
+    margin-bottom: 1.45rem;
+    .sizing{
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 1.45rem 1.0875rem;
+      h1{
+        margin: 0;
+      }
+    }
+  }
+  .content {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0px 1.0875rem 1.45rem;
+    padding-top: 0;
+  }
+  .page{
+    // height: 100rem;
+    color: $font-color;
+  }
 }

@@ -1,13 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
-// import '../styles/main.scss';
 
 const IndexPage = () => (
   <div className='page'>
-    <h1>Hi people</h1>
+    <h1>Hi Sean</h1>
     <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <p>Build your portfolio!</p>
   </div>
 )
 
