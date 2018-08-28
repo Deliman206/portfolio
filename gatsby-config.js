@@ -3,5 +3,5 @@ module.exports = {
     title: 'Sean Miller Portfolio',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-sass'],
-  pathPrefix: '/public'
+  pathPrefix: '/public',
 }
