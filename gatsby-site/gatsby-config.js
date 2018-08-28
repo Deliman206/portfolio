@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Sean Miller Portfolio',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-sass'],
+  pathPrefix: '/public'
 }
