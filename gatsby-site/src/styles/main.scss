@@ -46,6 +46,16 @@
     padding-top: 0;
   }
   .page{
-    color: $font-color;
+    color: $secondary;
+    font-size: 28px;
+    max-width:80%;
+    h1{
+      font-size: 72px;
+    }
+    .button{
+      padding: 1.25rem 2.75rem 1.25rem 2.75rem;
+      margin-top: 2.25rem;
+      margin-right: 2.25rem;
+    }
   }
 }
