@@ -3,13 +3,13 @@ module.exports = {
     title: 'Sean Miller Portfolio',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-sass',
-// {
-//   resolve:'gatsby-source-filesystem',
-//   options: {
-//     path: `${__dirname}/src/img`,
-//     name: 'images'
-//   }
-// }
+    {
+      resolve:'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/public/static`,
+        name: 'images'
+      }
+    },
 ],
   pathPrefix: '/public',
 }
