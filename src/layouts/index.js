@@ -5,24 +5,26 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import '../styles/main.scss';
 
-const Layout = ({ children, data }) => (
-  <div className='app'>
-    {
-      console.log(data)
-    }
-    <Helmet
-      // title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle='longtime' data={data}/>
-    <div className='content'>
-      {children()}
-    </div>
-  </div>
-)
+class Layout extends React.Component {
+  render () {
+    const {children, data} = this.props;
+    console.log(this.props)
+    return(
+      <div className='app'>
+        <Helmet
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        <Header siteTitle='longtime' headerImage={data.headerImage}/>
+        <div className='content'>
+          {children()}
+        </div>
+      </div>
+    );
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func,
@@ -30,14 +32,24 @@ Layout.propTypes = {
 
 export default Layout
 
-export const query = graphql`
-  query SiteTitleQuery {
-    allFile {
-      edges {
-        node {
-          id
-        }
+export const pageQuery = graphql`
+  query HeaderImageQuery {
+    headerImage: imageSharp(id: { regex: "/logo/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
       }
     }
   }
 `
+// export const imageQuery = graphql`
+// query images {
+//   allFile {
+//     edges {
+//       node {
+//         publicURL
+//         absolutePath
+//       }
+//     }
+//   }
+// }
+// `
