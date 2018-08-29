@@ -8,13 +8,13 @@ import '../styles/main.scss';
 const Layout = ({ children, data }) => (
   <div className='app'>
     <Helmet
-      title={data.site.siteMetadata.title}
+      // title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header siteTitle='longtime' />
     <div className='content'>
       {children()}
     </div>
@@ -29,9 +29,11 @@ export default Layout
 
 export const query = graphql`
   query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
+    allFile {
+      edges {
+        node {
+          id
+        }
       }
     }
   }
