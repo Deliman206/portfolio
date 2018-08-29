@@ -7,6 +7,9 @@ import '../styles/main.scss';
 
 const Layout = ({ children, data }) => (
   <div className='app'>
+    {
+      console.log(data)
+    }
     <Helmet
       // title={data.site.siteMetadata.title}
       meta={[
@@ -14,7 +17,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle='longtime' />
+    <Header siteTitle='longtime' data={data}/>
     <div className='content'>
       {children()}
     </div>
