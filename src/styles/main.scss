@@ -1,0 +1,60 @@
+.app{
+  @import './_normalize.scss';
+  @import './_base.scss';
+  @import './_all.scss';
+  @import './_vars.scss';
+  height: 100vh;
+  .link, 
+  .logo-link
+  {
+    color: white;
+    text-decoration: none;
+  }
+  .header {
+    background-color: $primary;
+    margin-bottom: 1.85rem;
+    .sizing{
+      margin: 0 auto;
+      max-width: 1180px;
+      padding: 1.45rem 1.0875rem;
+      .logo{
+        margin: 0;
+        display: inline-block;
+        color: white;
+        text-decoration: none; 
+      }
+      .header-links{
+        font-size: 22px;
+        float: right;
+        margin-top: 4.5rem;
+        .link{
+          padding: 1.25rem;
+          margin: 2.25rem;
+        }
+        .link:hover{
+          border-bottom-style: solid;
+          border-bottom-color: $triary;
+        }
+      }
+    }
+  }
+  .content {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0px 1.0875rem 1.45rem;
+    padding-top: 0;
+  }
+  .page{
+    color: $secondary;
+    font-size: 28px;
+    max-width:80%;
+    h1{
+      font-size: 72px;
+    }
+    .button{
+      padding: 1.25rem 2.75rem 1.25rem 2.75rem;
+      margin-top: 2.25rem;
+      margin-right: 2.25rem;
+    }
+  }
+}
