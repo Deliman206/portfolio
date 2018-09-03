@@ -1,6 +1,5 @@
 import React from 'react'
 import Link, { withPrefix } from 'gatsby-link'
-import Img from 'gatsby-image'
 
 class Header extends React.Component {
   render(){
